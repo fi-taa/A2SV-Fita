@@ -1,0 +1,4 @@
+num,num2 = input().split()
+prt = int(num) * int(num2)
+aveOf = prt//2
+print(aveOf)
