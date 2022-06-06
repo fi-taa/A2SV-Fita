@@ -1,0 +1,11 @@
+def select(seld, arr, i):
+   for i in range(len(arr)):
+      return arr[i]
+
+def selectionsort(self, arr, n):
+  for i in range(len(arr)):
+      temp = arr[i]
+      x = arr.index(min(arr[i:]),i)
+      arr[i] = min(arr[i:]
+      arr[x] = temp
+  return arr
