@@ -1,0 +1,13 @@
+import math
+user_input = input()
+n,m,a = user_input.split()
+n = int(n)
+m = int(m)
+a = int(a)
+
+L1 = math.ceil(n/a)
+L2 = math.ceil(m/a)
+
+f = L1*L2
+
+print(f)
