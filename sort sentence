@@ -1,0 +1,21 @@
+class Solution:
+    def sortSentence(self, s: str) -> str:
+        sortedString = " "
+        ApDigits = []
+        Split_words = s.split(" ")
+        Sorted_word = [0] * len(Split_words)
+        sortEnd = []
+
+        for i in s:
+            if(i.isdigit()):
+                ApDigits.append(int(i))
+
+        for i in ApDigits:
+            for j in range(len(Split_words)):
+                if(str(i) in Split_words[j]):
+                    Sorted_word[i-1] = Split_words[j]
+
+        for i in Sorted_word:
+                sortEnd.append(i[:len(i)-1])
+
+        return sortedString.join(sortEnd)
