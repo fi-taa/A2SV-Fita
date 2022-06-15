@@ -1,0 +1,23 @@
+class Solution:
+    def kClosest(self, points: List[List[int]], k: int) -> List[List[int]]:
+        Area = []
+        KArea = []
+
+        for i in range(len(points)):
+            j = 0
+            x = math.sqrt(pow(points[i][j],2) + pow(points[i][j+1],2))
+            print(x)
+            Area.append(x)
+
+
+        SortedArea = sorted(Area)
+
+        for i in range(len(points)):
+            j = 0
+            if(len(KArea) < k):
+                I = Area.index(SortedArea[i])
+                KArea.append(points[I])
+                #if to different index I of points have the same area
+                Area[I] = 0
+                points[I] = 0
+        return KArea
